@@ -1,6 +1,7 @@
 package com.team1.edoctor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,11 @@ public class BlogItemAdapter extends RecyclerView.Adapter<BlogItemAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        View view = holder.itemView;
+        view.findViewById(R.id.blog_dr).setOnClickListener(v->{
+            Intent i = new Intent(context, DoctorDetailActivity.class);
+            context.startActivity(i);
+        });
     }
 
     @Override

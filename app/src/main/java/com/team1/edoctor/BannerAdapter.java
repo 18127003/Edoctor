@@ -1,6 +1,7 @@
 package com.team1.edoctor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,14 @@ public class BannerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View itemView = layoutInflater.inflate(R.layout.banner_item, container, false);
+        itemView.setOnClickListener(v->{
+            switch (position){
+                case 1:
+                    Intent i = new Intent(context, CommonServiceActivity.class);
+                    context.startActivity(i);
+                    break;
+            }
+        });
         Objects.requireNonNull(container).addView(itemView);
         return itemView;
     }

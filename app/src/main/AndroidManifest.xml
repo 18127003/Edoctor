@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-        <activity android:name=".PharmacyActivity"></activity>
+        <activity android:name=".DoctorDetailActivity"></activity>
+        <activity android:name=".CommonServiceActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".PharmacyActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

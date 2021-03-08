@@ -1,6 +1,7 @@
 package com.team1.edoctor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,11 @@ public class AppointmentItemAdapter extends RecyclerView.Adapter<AppointmentItem
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        View view = holder.itemView;
+        view.findViewById(R.id.appointment_chat).setOnClickListener(v->{
+            Intent i = new Intent(context, ChatActivity.class);
+            context.startActivity(i);
+        });
     }
 
     @Override
